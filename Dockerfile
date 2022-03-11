@@ -24,15 +24,7 @@ RUN sudo apt-get install -y nodejs
 RUN code-server --install-extension esbenp.prettier-vscode
 RUN code-server --install-extension svelte.svelte-vscode
 RUN code-server --install-extension 9j.amvim
-RUN code-server --install-extension Ikuyadeu.r
 
-
-# Install R
-RUN sudo apt-get update
-# RUN sudo apt-get install -y r-base r-base-dev
-RUN sudo apt install --assume-yes --no-install-recommends build-essential libcurl4-openssl-dev libssl-dev libxml2-dev r-base
-
-RUN sudo Rscript init.R
 
 # Port
 ENV PORT=8080
